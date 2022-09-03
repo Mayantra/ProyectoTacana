@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Proyectos</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Agency Bootstrap Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Airspace Template v1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png'%}" />
+
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
+  <!-- Ionic Icon Css -->
+  <link rel="stylesheet" href="{% static 'plugins/Ionicons/css/ionicons.min.css'%}">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css'%}">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+
+<body id="body">
+
+<!-- Header Start -->
+<header class="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-expand-lg p-0">
+					<a class="navbar-brand" href="#">
+						<img src="{% static 'images/logo.png'%}" alt="Logo">
+					</a>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="ion-android-menu"></span>
+					</button>
+
+					<div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="{% url 'home:index'%}">Inicio</a>
+							</li>
+							<li class="nav-item dropdown @@portfolio">
+								<a class="nav-link dropdown-toggle" href="{% url 'home:proyectosA'%}" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Proyectos <span class="ion-ios-arrow-down"></span></a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown03">
+									<li><a class="dropdown-item @@portfolioFilter" href="#">Carreteras</a></li>
+                  <li><a class="dropdown-item @@portfolioFilter" href="#">Drenajes</a></li>
+                  <li><a class="dropdown-item @@portfolioFilter" href="#">Agua y saneamiento</a></li>
+
+									<!-- <li class="dropdown dropdown-submenu dropright">
+										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+
+										<ul class="dropdown-menu" aria-labelledby="dropdown0301">
+											<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+											<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+										</ul>
+									</li> -->
+								</ul>
+							</li>
+							<li class="nav-item @@service"><a class="nav-link" href="#">Personal a Cargo</a></li>
+							<li class="nav-item dropdown @@blog">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Detalles Proyectos <span class="ion-ios-arrow-down"></span></a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown05">
+									<li><a class="dropdown-item @@blogGrid" href="#">Croquis y Ubicación</a></li>
+									<li><a class="dropdown-item @@blogSingle" href="#">Presupuestos</a></li>
+									<li><a class="dropdown-item @@blogRS" href="#">Proyectos Finalizados</a></li>
+									<li><a class="dropdown-item @@blogLS" href="#">Proyectos Futuros</a></li>
+
+									<!-- <li class="dropdown dropdown-submenu dropleft">
+										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+
+										<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+											<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+											<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+										</ul>
+									</li> -->
+								</ul>
+							</li>
+							<li class="nav-item @@contact"><a class="nav-link" href="#">Contacto</a></li>
+							<li class="nav-item @@contact"><a class="nav-link" href="#">Login</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header><!-- header close -->
+
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Proyectos</h1>
+          <p>En este apartado estarán los proyectos en proceso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Start -->
+<section class="portfolio-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <div class="btn-group btn-group-toggle justify-content-center" data-toggle="buttons">
+              <label class="btn btn-sm btn-primary active">
+                <input type="radio" name="shuffle-filter" value="all" checked="checked" />Infraestructura
+              </label>
+              <label class="btn btn-sm btn-primary">
+                <input type="radio" name="shuffle-filter" value="design" />Drenajes
+              </label>
+              <label class="btn btn-sm btn-primary">
+                <input type="radio" name="shuffle-filter" value="video" />Agua y saneamiento
+              </label>
+              <label class="btn btn-sm btn-primary">
+                <input type="radio" name="shuffle-filter" value="illustration" />Carreteras
+              </label>
+            </div>
+          </div>
+          <div class="row shuffle-wrapper">
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
+              <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="#" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="#">Infraestructura de Escuela</a>
+                  <p>Escuela Greis </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
+              <img src="https://images.pexels.com/photos/1474993/pexels-photo-1474993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="https://images.pexels.com/photos/3688260/pexels-photo-3688260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="portfolio-single.html">Reparacion de Estructuras Metalicas</a>
+                  <p>Salon de usos multiples</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;illustration&quot;]">
+              <img src="https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="https://images.pexels.com/photos/4509089/pexels-photo-4509089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="portfolio-single.html">Reconstruccion de Areas publicas</a>
+                  <p>Parques recreativos </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;video&quot;,&quot;illustration&quot;]">
+              <img src="https://images.pexels.com/photos/162564/gardener-worker-gardening-machinery-162564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="images/portfolio/work4.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
+                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
+              <img src="https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="images/portfolio/work5.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
+                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;video&quot;]">
+              <img src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?cs=srgb&dl=pexels-pixabay-159358.jpg&fm=jpg" alt="">
+              <div class="portfolio-hover">
+                <div class="portfolio-content">
+                  <a href="images/portfolio/work6.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
+                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio End -->
+
+<!-- footer Start -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<p class="copyright mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Designed & Developed by <a
+						href="http://www.themefisher.com">Themefisher</a>. All rights reserved.
+					<br> Get More <a href="https://themefisher.com/free-bootstrap-templates/">Free Bootstrap
+						Templates</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--Scroll to top-->
+<div id="scroll-to-top" class="scroll-to-top">
+	<span class="icon ion-ios-arrow-up"></span>
+</div>
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- filter -->
+    <script src="plugins/shuffle/shuffle.min.js"></script>
+    <script src="plugins/SyoTimer/jquery.syotimer.min.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+    <script src="plugins/google-map/map.js"></script>
+
+    <script src="js/script.js"></script>
+
+    </body>
+
+    </html>
