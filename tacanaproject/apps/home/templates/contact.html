@@ -167,7 +167,7 @@
           <h2>Stop By For A visit</h2>
           <ul class="address-block">
             <li>
-              <i class="ion-ios-location-outline"></i>North Main Street,Brooklyn Australia
+              <i class="ion-ios-location-outline"></i>RN-12N 334, Tacaná
             </li>
             <li>
               <i class="ion-ios-email-outline"></i>Email: contact@mail.com
@@ -201,8 +201,8 @@
       <div class="col-md-6 mt-5 mt-md-0">
         <div class="block">
           <div class="google-map">
-            <div class="map" id="map_canvas" data-latitude="51.5223477" data-longitude="-0.1622023"
-              data-marker="images/marker.png"></div>
+            
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.496518800068!2d-92.0689138854997!3d15.240695189397318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858dc3620b3a7513%3A0x6ade9dc6cac7aad3!2sMunicipalidad%20de%20Tacan%C3%A1!5e0!3m2!1ses!2sgt!4v1663036621696!5m2!1ses!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -242,21 +242,21 @@
     =====================================-->
 
 
-    <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
-    <!-- slick Carousel -->
-    <script src="plugins/slick/slick.min.js"></script>
-    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!-- filter -->
-    <script src="plugins/shuffle/shuffle.min.js"></script>
-    <script src="plugins/SyoTimer/jquery.syotimer.min.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
-    <script src="plugins/google-map/map.js"></script>
+   <!-- Main jQuery -->
+   <script src="{% static 'plugins/jquery/jquery.min.js' %} "></script>
+   <!-- Bootstrap 3.1 -->
+   <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+   <!-- slick Carousel -->
+   <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+   <script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+   <!-- filter -->
+   <script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+   <script src="{% static 'plugins/SyoTimer/jquery.syotimer.min.js' %}"></script>
+   <!-- Google Map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+   <script src="{% static 'plugins/google-map/map.js' %}"></script>
 
-    <script src="js/script.js"></script>
+   <script src="{% static 'js/script.js' %}"></script>
 
     </body>
 
