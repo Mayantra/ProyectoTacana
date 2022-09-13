@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 
 <!--
@@ -23,22 +24,22 @@
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Airspace Template v1.0">
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png'%}" />
 
 
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
   <!-- Ionic Icon Css -->
-  <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="{% static 'plugins/Ionicons/css/ionicons.min.css'%}">
   <!-- animate.css -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
   <!-- Magnify Popup -->
-  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css'%}">
   <!-- Slick CSS -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
 
 </head>
 
@@ -87,9 +88,9 @@
 								<ul class="dropdown-menu" aria-labelledby="dropdown05">
 									<li><a class="dropdown-item activeGrid" href="blog-grid.html">Blog Grid</a></li>
 									<li><a class="dropdown-item activeSingle" href="blog-single.html">Blog Single</a></li>
-									<li><a class="dropdown-item activeRS" href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+									<li><a class="dropdown-item active" href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
 									<li><a class="dropdown-item activeLS" href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-									<li><a class="dropdown-item active" href="blog-full-width.html">Blog Full Width</a></li>
+									<li><a class="dropdown-item activeFW" href="blog-full-width.html">Blog Full Width</a></li>
 
 									<li class="dropdown dropdown-submenu dropleft">
 										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
@@ -127,20 +128,19 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>Blog Full Width</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ex!</p>
+          <h1>Blog Right Sidebar</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
 <div class="page-wrapper">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-10">
-				<div class="post">
+		<div class="row">
+			<div class="col-lg-8">
+					<div class="post">
   <div class="post-media post-thumb">
     <a href="blog-single.html">
       <img src="images/blog/blog-post-1.jpg" alt="">
@@ -319,7 +319,95 @@
     <li class="page-item"><a class="page-link" href="blog-grid.html">Next</a></li>
   </ul>
 </nav>
+				</div>
+				<div class="col-lg-4">
+					<div class="pl-0 pl-xl-4">
+						<aside class="sidebar pt-5 pt-lg-0 mt-5 mt-lg-0">
+	<!-- Widget Latest Posts -->
+	<div class="widget widget-latest-post">
+		<h4 class="widget-title">Latest Posts</h4>
+		<div class="media">
+			<a class="pull-left" href="blog-single.html">
+				<img class="media-object" src="images/blog/post-thumb.jpg" alt="Image">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading"><a href="blog-single.html">Introducing Swift for Mac</a></h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, officia.</p>
 			</div>
+		</div>
+		<div class="media">
+			<a class="pull-left" href="blog-single.html">
+				<img class="media-object" src="images/blog/post-thumb-2.jpg" alt="Image">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading"><a href="blog-single.html">Welcome to Themefisher Family</a></h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, officia.</p>
+			</div>
+		</div>
+		<div class="media">
+			<a class="pull-left" href="blog-single.html">
+				<img class="media-object" src="images/blog/post-thumb-3.jpg" alt="Image">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading"><a href="blog-single.html">Warm welcome from swift</a></h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, officia.</p>
+			</div>
+		</div>
+		<div class="media">
+			<a class="pull-left" href="blog-single.html">
+				<img class="media-object" src="images/blog/post-thumb-4.jpg" alt="Image">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading"><a href="blog-single.html">Introducing Swift for Mac</a></h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, officia.</p>
+			</div>
+		</div>
+	</div>
+	<!-- End Latest Posts -->
+
+	<!-- Widget Category -->
+	<div class="widget widget-category">
+		<h4 class="widget-title">Categories</h4>
+		<ul class="widget-category-list">
+			<li><a href="blog-grid.html">Animals</a>
+			</li>
+			<li><a href="blog-grid.html">Landscape</a>
+			</li>
+			<li><a href="blog-grid.html">Portrait</a>
+			</li>
+			<li><a href="blog-grid.html">Wild Life</a>
+			</li>
+			<li><a href="blog-grid.html">Video</a>
+			</li>
+		</ul>
+	</div> <!-- End category  -->
+
+	<!-- Widget tag -->
+	<div class="widget widget-tag">
+		<h4 class="widget-title">Tag Cloud</h4>
+		<ul class="widget-tag-list">
+			<li><a href="blog-grid.html">Animals</a>
+			</li>
+			<li><a href="blog-grid.html">Landscape</a>
+			</li>
+			<li><a href="blog-grid.html">Portrait</a>
+			</li>
+			<li><a href="blog-grid.html">Wild Life</a>
+			</li>
+			<li><a href="blog-grid.html">Video</a>
+			</li>
+		</ul>
+	</div> <!-- End tag  -->
+
+
+
+
+
+
+
+</aside>
+					</div>
+				</div>
 		</div>
 	</div>
 </div>
