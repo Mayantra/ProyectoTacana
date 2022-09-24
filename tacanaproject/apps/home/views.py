@@ -1,6 +1,7 @@
 from string import Template
 from django.shortcuts import render
 from django.views.generic import *
+from django.contrib.auth.views import *
 
 # Create your views here.
 
@@ -20,5 +21,29 @@ class detallesProject(TemplateView):
 class contactoView(TemplateView):
     template_name = 'contact.html'
 
+class oficinaView(TemplateView):
+    template_name = 'oficinas.html'
+
+class loginView(LoginView):
+    template_name = 'registro/login.html'
+
+class avancesProyecto(TemplateView):
+    template_name = 'avances.html'
+
+    
+#-------------------------------------------------
+#Formularios del perfil de encargados 
+class formularioAView(TemplateView):
+    template_name = 'formAvances.html'
+
+class formProView(TemplateView):
+    template_name = 'formProyecto.html'
+
+class formTipoView(TemplateView):
+    template_name = 'formTipo.html'
+#-----------------------------------------------
+
+
+
 class verView(TemplateView):
-    template_name = 'service.html'
+    template_name = 'avances.html'

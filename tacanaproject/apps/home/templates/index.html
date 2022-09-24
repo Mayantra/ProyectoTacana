@@ -24,7 +24,7 @@
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Airspace Template v1.0">
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png'%}" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.crwflags.com/fotw/images/g/gt-sm)26.gif" />
 
 
   <!-- bootstrap.min css -->
@@ -51,7 +51,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg p-0">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="{% url 'home:index'%}">
 						<img src="{% static 'images/logo.png'%}" alt="Logo">
 					</a>
 
@@ -64,14 +64,17 @@
 							<li class="nav-item active">
 								<a class="nav-link" href="{% url 'home:index'%}">Inicio</a>
 							</li>
-							<li class="nav-item dropdown @@portfolio">
+              <li class="nav-item">
+								<a class="nav-link" href="{% url 'home:proyectosA'%}">Proyectos</a>
+							</li>
+							<!-- <li class="nav-item dropdown @@portfolio">
 								<a class="nav-link dropdown-toggle" href="{% url 'home:proyectosA'%}" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Proyectos <span class="ion-ios-arrow-down"></span></a>
 								<ul class="dropdown-menu" aria-labelledby="dropdown03">
 									<li><a class="dropdown-item @@portfolioFilter" href="#">Carreteras</a></li>
                   <li><a class="dropdown-item @@portfolioFilter" href="#">Drenajes</a></li>
                   <li><a class="dropdown-item @@portfolioFilter" href="#">Agua y saneamiento</a></li>
 
-									<!-- <li class="dropdown dropdown-submenu dropright">
+									<li class="dropdown dropdown-submenu dropright">
 										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
 											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
 
@@ -79,32 +82,13 @@
 											<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
 											<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
 										</ul>
-									</li> -->
+									</li>
 								</ul>
-							</li>
-							<li class="nav-item @@service"><a class="nav-link" href="#">Oficina</a></li>
-							<li class="nav-item dropdown @@blog">
-								<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">Detalles Proyectos <span class="ion-ios-arrow-down"></span></a>
-								<ul class="dropdown-menu" aria-labelledby="dropdown05">
-									<li><a class="dropdown-item @@blogGrid" href="#">Croquis y Ubicación</a></li>
-									<li><a class="dropdown-item @@blogSingle" href="#">Presupuestos</a></li>
-									<li><a class="dropdown-item @@blogRS" href="#">Proyectos Finalizados</a></li>
-									<li><a class="dropdown-item @@blogLS" href="#">Proyectos Futuros</a></li>
-
-									<!-- <li class="dropdown dropdown-submenu dropleft">
-										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-
-										<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-											<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
-											<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
-										</ul>
-									</li> -->
-								</ul>
-							</li>
+							</li> -->
+							<li class="nav-item "><a class="nav-link" href="{% url 'home:oficinas'%}">Oficinas</a></li>
+							
 							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:contacto'%}">Contacto</a></li>
-							<li class="nav-item @@contact"><a class="nav-link" href="#">Login</a></li>
+							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:login'%}">Login</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -124,7 +108,7 @@
 				<div class="block">
 					<h1 class="animated fadeInUp">Demostración de avances <br> de proyectos de infraestructuta</h1>
 					<p class="animated fadeInUp">Departamento de San Marcos municipio de Tacaná </br>  Creando una ideologia íntegra y transparente</p>
-					<a href="#" class="btn btn-main animated fadeInUp" >Proyectos</a>
+					<a href="{% url 'home:proyectosA'%}" class="btn btn-main animated fadeInUp" >Proyectos</a>
 				</div>
 			</div>
 		</div>
@@ -157,22 +141,60 @@
 	</div>
 </section>
 
-<section class="feature bg-2">
-  <div class="container">
-    <div class="row justify-content-end">
-      <div class="col-md-6">
-        <h2 class="section-subtitle">Misión</h2>
-        <p>Estamos constantemente trabajando en un lugar accesible y acogedor para cada individuo que esté en el municipio 
-          brindando una calidad de vida y libre locomoción a cada habitante del municipio de Tacaná.
+
+
+<section class="about section">
+	<div class="container">
+		<div class="row">
+      <div class="col-md-5">
+				<div class="block">
+					<img src="https://www.guatevalley.com/photo/photo_a1/19516/SNx9jhZaGKsabY4MENF3.jpg" alt="Img">
+				</div>
+			</div><!-- .col-md-5 close -->
+			<div class="col-md-7">
+				<div class="block">
+					<div class="section-title">
+						<h2 class="section-subtitle">Misión</h2>
+        <p>La Municipalidad es una institución de derecho público, 
+          que se preocupa en buscar y alcanzar el bien común de todos los habitantes del municipio de Tacaná, 
+          tanto en el área urbana, como rural, comprometiéndose a presentar y administrar los servicios 
+          públicos de la población bajo su jurisdicción territorial, sin perseguir fines lucrativos.
         </p>
-        <p>Temos proyectos en mente que puede beneficiarnos, de tal manera que todos estemos de acuerdo y que este apartado 
-          pueda servir como medio de información y comunicación para los disntintos interesados.
+        
+        
+				</div>
+			</div><!-- .col-md-7 close -->
+			
+		</div>
+	</div>
+</section>
+<section class="about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="block">
+					<div class="section-title">
+						<h2 class="section-subtitle">Visión</h2>
+        <p>La Municipalidad de Tacaná, departamento de San Marcos, 
+          velará y garantizará el fiel cumplimiento de las políticas municipales, 
+          a través de ejercer y defender la Autonomía municipal conforme lo establece la Constitución Política de la Republica de Guatemala y el Código Municipal.
         </p>
-       
-        <a href="#" class="btn btn-view-works">Proyectos Futuros</a>
-      </div>
-    </div>
-  </div>
+        <p>Así mismo, la Municipalidad visualiza e impulsa permanentemente para mantener y
+           brindar un servicio eficiente y eficaz, además mantener el desarrollo integral del municipio y 
+           resguardar su integridad territorial, el fortalecimiento de su patrimonio económico, 
+           la preservación de su patrimonio natural y cultural y sobre todo promover la participación efectiva, 
+          voluntaria y organizada de los habitantes, en la solución de sus problemas.</p>
+					</div>
+					
+				</div>
+			</div><!-- .col-md-7 close -->
+			<div class="col-md-5">
+				<div class="block">
+					<img src="https://www.guatevalley.com/photo/photo_a1/19516/HFcS88gC8SGWGKaWCLdt.jpg" alt="Img">
+				</div>
+			</div><!-- .col-md-5 close -->
+		</div>
+	</div>
 </section>
 
 <!-- Service Start -->
@@ -199,7 +221,7 @@
         <div class="service-item">
           <i class="ion-compass"></i>
           <h4>Ubicación</h4>
-          <p>Se presentarán las ubicaciones exactas de los proyectos realizados</p>
+          <p>Se presentarán las ubicaciones exactas de los proyectos realizados y oficinas</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6">
@@ -359,18 +381,16 @@
 
 <!-- footer Start -->
 <footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				
-				<p class="copyright mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Designed & Developed by <a
-						href="http://www.themefisher.com">Themefisher</a>. All rights reserved.
-					<br> Get More <a href="https://themefisher.com/free-bootstrap-templates/">Free Bootstrap
-						Templates</a>
-				</p>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <p class="copyright mb-0">Mejorando la calida de vida la sociedad
+          <br>Municipalidad de Tacaná
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <!--Scroll to top-->

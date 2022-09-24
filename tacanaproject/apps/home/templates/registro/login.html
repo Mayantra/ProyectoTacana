@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Oficinas</title>
+  <title>Login</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -68,10 +68,10 @@
 								<a class="nav-link" href="{% url 'home:proyectosA'%}">Proyectos</a>
 							</li>
 							
-							<li class="nav-item active"><a class="nav-link" href="{% url 'home:oficinas'%}">Oficinas</a></li>
+							<li class="nav-item "><a class="nav-link" href="{% url 'home:oficinas'%}">Oficinas</a></li>
 							
 							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:contacto'%}">Contacto</a></li>
-							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:login'%}">Login</a></li>
+							<li class="nav-item @@contact active"><a class="nav-link" href="{% url 'home:login'%}">Login</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -80,120 +80,81 @@
 	</div>
 </header><!-- header close -->
 
-<section class="page-title bg-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Oficinas</h1>
-          <p>
-			Contamos con las siguientes oficinas en las que te atenderemos con mucho gusto
-		  </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
-<div class="page-wrapper">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a >
-							<img class="img-fluid" src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">DAFIM</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
+<!-- Section: Design Block -->
+<section class=" text-center text-lg-start">
+	<style>
+	  .rounded-t-5 {
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	  }
+  
+	  @media (min-width: 992px) {
+		.rounded-tr-lg-0 {
+		  border-top-right-radius: 0;
+		}
+  
+		.rounded-bl-lg-5 {
+		  border-bottom-left-radius: 0.5rem;
+		}
+	  }
+	</style>
+	<div class="card mb-3">
+	  <div class="row g-0 d-flex align-items-center">
+		<div class="col-lg-4 d-none d-lg-flex">
+		  <img src="https://lh3.googleusercontent.com/p/AF1QipO1xw550LuaVCZ_OD-daHGoySWfX9y6WI4DYv_I=s1600-w400" alt="Trendy Pants and Shoes"
+			class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+		</div>
+		<div class="col-lg-8">
+		  <div class="card-body py-5 px-md-5">
+  
+			<form method="POST">
+				{% csrf_token%}
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>La Administración Finaciera Municipal lleva el control de los ingresos y egresos de los
-							aspectos financieros de la municpalidad, encargada de administrar el dinero que es 
-						utlilizado para todos los gastos que se requieren en le municipio de tacaná </p>
-						
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a >
-							<img class="img-fluid" src="https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">DMMNA</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
+			  <div class="d-flex align-items-center mb-3 pb-1">
+				
+				<span class="h1 fw-bold mb-0">Inicio de sesión</span>
+			  </div>
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>Dirección Municipal de la Mujer niñez y Adolescencia. Vela por los derechos de la mujer,
-							niños y adolecentes. Pueden obtener asesoría y ayuda de cualquier inconveniente que estén presentando.			
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a href="blog-single.html">
-							<img class="img-fluid" src="https://images.pexels.com/photos/2339722/pexels-photo-2339722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">OMAS</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
+			  
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>Oficina Municipal de Agua y Saneamiento, vela por una calidad de agua que esta en el sistema de tuberias
-							del municipio de tacaná, asi mismo es la encargada de realizar los cobros por el uso de servicio de agua
-							en el hogar.
-						</p>
-					</div>
-				</div>
-			</div>
+			  <div class="form-outline mb-4">
+				<input type="text" class="form-control form-control-lg" name="username" />
+				<!-- {{ form.username }}   -->
+				<label class="form-label" for="form2Example17">Usuario</label>
+			  </div>
+
+			  <div class="form-outline mb-4">
+				<input type="password" class="form-control form-control-lg" name ="password"/>
+				<!-- {{ form.password }}   -->
+				<label class="form-label" for="form2Example27">Contraseña</label>
+			  </div>
+
+			  <div class="pt-1 mb-4">
+				<button class="btn btn-dark btn-lg btn-block" type="submit">Ingresar</button>
+			  </div>
+
+			  
+			</form>
+  
+		  </div>
+		</div>
+	  </div>
 	</div>
-</div>
-
+  </section>
+  <!-- Section: Design Block -->
 
 <!-- footer Start -->
 <footer class="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-
-				<p class="copyright mb-0">Mejorando la calida de vida la sociedad
-					<br>Municipalidad de Tacaná
+				
+				<p class="copyright mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Designed & Developed by <a
+						href="http://www.themefisher.com">Themefisher</a>. All rights reserved.
+					<br> Get More <a href="https://themefisher.com/free-bootstrap-templates/">Free Bootstrap
+						Templates</a>
 				</p>
 			</div>
 		</div>

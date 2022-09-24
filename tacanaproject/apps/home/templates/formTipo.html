@@ -1,0 +1,173 @@
+{%load static%}
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+
+	<head>
+
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8">
+		<title>{% if user.is_authenticated %}
+			{{ user.username }}
+		  {% endif %}</title>
+
+	  
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Creative Agency Bootstrap Template">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+		<meta name="author" content="Themefisher">
+		<meta name="generator" content="Themefisher Airspace Template v1.0">
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="https://www.crwflags.com/fotw/images/g/gt-sm)26.gif" />
+	  
+	  
+		<!-- bootstrap.min css -->
+		<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
+		<!-- Ionic Icon Css -->
+		<link rel="stylesheet" href="{% static 'plugins/Ionicons/css/ionicons.min.css'%}">
+		<!-- animate.css -->
+		<link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
+		<!-- Magnify Popup -->
+		<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css'%}">
+		<!-- Slick CSS -->
+		<link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
+		
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	  
+	  </head>
+	  
+	  <body id="body">
+	  
+	  <!-- Header Start -->
+	  <header class="navigation">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-lg-12">
+					  <nav class="navbar navbar-expand-lg p-0">
+						  <a class="navbar-brand" href="{% url 'home:index'%}">
+							  <img src="{% static 'images/logo.png'%}" alt="Logo">
+						  </a>
+	  
+						  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="ion-android-menu"></span>
+						  </button>
+	  
+						  <div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+							  <ul class="navbar-nav ml-auto">
+								  <li class="nav-item">
+									  <a class="nav-link" href="{% url 'home:formAvances'%}">Nuevo Avance</a>
+								  </li>
+					<li class="nav-item">
+									  <a class="nav-link" href="{% url 'home:formProyecto'%}">Nuevo Proyecto</a>
+								  </li>
+								  
+								  <li class="nav-item "><a class="nav-link" href="{% url 'home:formTipo'%}">Nuevo Tipo de Proyecto</a></li>
+								  
+								  <li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:logout' %}">logout</a></li>
+							  </ul>
+						  </div>
+					  </nav>
+				  </div>
+			  </div>
+		  </div>
+	  </header><!-- header close -->
+
+	<section class="page-title bg-2">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="block">
+				<h1>Nuevo Tipo de Proyecto</h1>
+				<p>Agrega el tipo de proyecto sin en caso no sen encuentre en el listado
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+
+	<section class="contact-form">
+		<div class="container">
+			<form class="row" id="contact-form">
+				<div class="col-md-6 col-sm-12">
+					<div class="block">
+						<div class="form-group">
+							<label for="sel1">Nombre</label>
+							<input class="form-control" placeholder="Nombre del Tipo de Proyecto">
+						</div>
+											
+
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="block">
+						<div class="form-group-2">
+							<textarea class="form-control" rows="8"
+								placeholder="Descripción del Tipo de Proyecto"></textarea>
+						</div>
+						<button class="btn btn-default" type="submit">Send Message</button>
+					</div>
+				</div>
+				<div class="error" id="error">Sorry Msg dose not sent</div>
+				<div class="success" id="success">Message Sent</div>
+			</form>
+		</div>
+	</section>
+
+			<!-- footer Start -->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+
+							<p class="copyright mb-0">Mejorando la calida de vida la sociedad
+								<br>Municipalidad de Tacaná
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<!--Scroll to top-->
+			<div id="scroll-to-top" class="scroll-to-top">
+				<span class="icon ion-ios-arrow-up"></span>
+			</div>
+
+			<!-- 
+    Essential Scripts
+    =====================================-->
+
+
+			<!-- Main jQuery -->
+			<script src="{% static 'plugins/jquery/jquery.min.js' %} "></script>
+			<!-- Bootstrap 3.1 -->
+			<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+			<!-- slick Carousel -->
+			<script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+			<script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+			<!-- filter -->
+			<script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+			<script src="{% static 'plugins/SyoTimer/jquery.syotimer.min.js' %}"></script>
+			<!-- Google Map -->
+			<script
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+			<script src="{% static 'plugins/google-map/map.js' %}"></script>
+
+			<script src="{% static 'js/script.js' %}"></script>
+			
+
+</body>
+
+</html>
