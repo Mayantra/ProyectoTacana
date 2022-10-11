@@ -87,7 +87,7 @@
       <div class="col-md-12">
         <div class="block">
           <h1>Proyectos</h1>
-          <p>En este apartado estarán los proyectos en proceso.</p>
+          <p>Encontrarás los proyectos que se han realizado y que están realizándose</p>
         </div>
       </div>
     </div>
@@ -100,7 +100,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <div class="portfolio-menu">
+
+          <!-- <div class="portfolio-menu">
             <div class="btn-group btn-group-toggle justify-content-center" data-toggle="buttons">
               <label class="btn btn-sm btn-primary active">
                 <input type="radio" name="shuffle-filter" value="all" checked="checked" />Infraestructura
@@ -115,17 +116,18 @@
                 <input type="radio" name="shuffle-filter" value="illustration" />Carreteras
               </label>
             </div>
-          </div>
+          </div> -->
+
           <div class="row shuffle-wrapper">
             
             {% for i in object_list%}
             <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
-              <a href="{% url 'home:detallesproject'%}">
+              <a href="{% url 'home:detallesproject' i.id%}">
               <img src="{{i.foto.url}}" alt="img">
               <div class="portfolio-hover">
                 <div class="portfolio-content">
-                  <a href="{% url 'home:detallesproject'%}"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="{% url 'home:detallesproject'%}">{{i.nombre}}</a>
+                  <a href="{% url 'home:detallesproject' i.id%}"><i class="icon ion-ios-arrow-up"></i></a>
+                  <a class="h3" href="{% url 'home:detallesproject' i.id%}">{{i.nombre}}</a>
                   <p>{{i.lugar}} </p>
                 </div>
               </div>

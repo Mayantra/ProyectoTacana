@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Login</title>
+  <title>Proyecto</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -85,19 +85,20 @@
     <div class="row align-items-center">
       <div class="col-xl-8 col-lg-7">
         <div class="portfolio-single-slider">
-          <div><img class="img-fluid" src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></div>
+          <div><img class="img-fluid" src="{{object.foto.url}}"></div>
           
         </div>
       </div>
       <div class="col-xl-4 col-lg-5 mt-5 mt-lg-0">
         <div class="project-details">
-          <h4>Detalles del Proyecto</h4>
+          <h4>{{object.nombre}}</h4>
           <ul>
-            <li><span><i class="fa fa-shirtsinbulk "></i> Lugar</span><strong>Escula pública Greis</strong></li>
-            <li><span><i class="fa fa-shield "></i> Apertura del proyecto</span><strong>18/03/2022</strong></li>
-            <li><span><i class="fa fa-ils "></i> Presupuesto</span><strong> Q 30,000.00</strong></li>
-            <li><span><i class="icon-calendar3"></i>Encargado</span> Juan Mendez</li>
-            <li><span><i class="icon-calendar3"></i>Tiempo de Ejecución</span> 3 meses</li>
+            <li><span><i class="fa fa-shirtsinbulk "></i> Lugar</span><strong>{{object.lugar}}</strong></li>
+            <li><span><i class="fa fa-shield "></i> Apertura del proyecto</span><strong>{{object.fechaApertura}}</strong></li>
+            <li><span><i class="fa fa-shield "></i> Fecha posible a finalizar </span><strong>{{object.fechaFinal}}</strong></li>
+            <li><span><i class="fa fa-ils "></i> Presupuesto</span><strong> Q {{object.presupuesto}}</strong></li>
+            <li><span><i class="icon-calendar3"></i>Encargado</span> {{object.encargado}}</li>
+            <li><span><i class="icon-calendar3"></i>Tiempo de Ejecución</span> {{object.tiempo}}</li>
             <li><a href="{% url 'home:avances'%}" class="btn btn-small">Avances del Proyecto</a></li>
           </ul>
         </div>
@@ -107,14 +108,8 @@
       <div class="col-md-12">
         <div class="project-content mt-50">
           <h2 class="mb-3">Descripción</h2>
-          <p>Se esta arreglando toda la infraestructura y servicio de agua de toda la escuaela con el finde que los alumnos
-            de dicha institución esten comodos durante el tiempo de invierno, dandole mantenimiento a los techos y proteger paredes
-            contra humedad
-          </p>
-          <p>Asi mismo se pretende trabajar con la tuberia, eliminando fugas y falta de presion de agua en las tuberias,
-            de tal manera que estas puedan llegar a cada uno de los lugares destinados sin ningun inconveniente, como baños
-            piletas y grifos en distintos puntos.
-          </p>
+          <p>{{object.descripcio}}</p>
+          
           
       </div>
     </div>

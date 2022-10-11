@@ -16,8 +16,13 @@ class proyectosView(ListView):
     model =proyectoslist
     template_name = 'proyectosA.html'
 
+    queryset = proyectoslist.objects.order_by('-fecha_actualizacion')
+
+
+
 #apartado donde estaran la descripción especifica de cada proyecto
-class detallesProject(TemplateView):
+class detallesProject(DetailView):
+    model =proyectoslist
     template_name = 'detallesProject.html'
 
 #Pagina para ponerse en contacto
