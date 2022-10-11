@@ -9,223 +9,182 @@
 -->
 
 <html lang="en">
+
 <head>
 
-  <!-- Basic Page Needs
+	<!-- Basic Page Needs
   ================================================== -->
-  <meta charset="utf-8">
-  <title>Oficinas</title>
+	<meta charset="utf-8">
+	<title>Oficinas</title>
 
-  <!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
   ================================================== -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Creative Agency Bootstrap Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="author" content="Themefisher">
-  <meta name="generator" content="Themefisher Airspace Template v1.0">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="https://www.crwflags.com/fotw/images/g/gt-sm)26.gif" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Creative Agency Bootstrap Template">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta name="author" content="Themefisher">
+	<meta name="generator" content="Themefisher Airspace Template v1.0">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.crwflags.com/fotw/images/g/gt-sm)26.gif" />
 
 
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
-  <!-- Ionic Icon Css -->
-  <link rel="stylesheet" href="{% static 'plugins/Ionicons/css/ionicons.min.css'%}">
-  <!-- animate.css -->
-  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
-  <!-- Magnify Popup -->
-  <link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css'%}">
-  <!-- Slick CSS -->
-  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<!-- bootstrap.min css -->
+	<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
+	<!-- Ionic Icon Css -->
+	<link rel="stylesheet" href="{% static 'plugins/Ionicons/css/ionicons.min.css'%}">
+	<!-- animate.css -->
+	<link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
+	<!-- Magnify Popup -->
+	<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css'%}">
+	<!-- Slick CSS -->
+	<link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
+
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
 
 </head>
 
 <body id="body">
 
-<!-- Header Start -->
-<header class="navigation">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<nav class="navbar navbar-expand-lg p-0">
-					<a class="navbar-brand" href="{% url 'home:index'%}">
-						<img src="{% static 'images/logo.png'%}" alt="Logo">
-					</a>
-
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="ion-android-menu"></span>
-					</button>
-
-					<div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item">
-								<a class="nav-link" href="{% url 'home:index'%}">Inicio</a>
-							</li>
-              <li class="nav-item">
-								<a class="nav-link" href="{% url 'home:proyectosA'%}">Proyectos</a>
-							</li>
-							
-							<li class="nav-item active"><a class="nav-link" href="{% url 'home:oficinas'%}">Oficinas</a></li>
-							
-							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:contacto'%}">Contacto</a></li>
-							<li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:login'%}">Login</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-</header><!-- header close -->
-
-<section class="page-title bg-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Oficinas</h1>
-          <p>
-			Contamos con las siguientes oficinas en las que te atenderemos con mucho gusto
-		  </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div class="page-wrapper">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a >
-							<img class="img-fluid" src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+	<!-- Header Start -->
+	<header class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav class="navbar navbar-expand-lg p-0">
+						<a class="navbar-brand" href="{% url 'home:index'%}">
+							<img src="{% static 'images/logo.png'%}" alt="Logo">
 						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">DAFIM</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>La Administración Finaciera Municipal lleva el control de los ingresos y egresos de los
-							aspectos financieros de la municpalidad, encargada de administrar el dinero que es 
-						utlilizado para todos los gastos que se requieren en le municipio de tacaná </p>
-						
-					</div>
+						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+							data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="ion-android-menu"></span>
+						</button>
+
+						<div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'home:index'%}">Inicio</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'home:proyectosA'%}">Proyectos</a>
+								</li>
+
+								<li class="nav-item active"><a class="nav-link"
+										href="{% url 'home:oficinas'%}">Oficinas</a></li>
+
+								<li class="nav-item @@contact"><a class="nav-link"
+										href="{% url 'home:contacto'%}">Contacto</a></li>
+								<li class="nav-item @@contact"><a class="nav-link"
+										href="{% url 'home:login'%}">Login</a></li>
+							</ul>
+						</div>
+					</nav>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a >
-							<img class="img-fluid" src="https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">DMMNA</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
+		</div>
+	</header><!-- header close -->
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>Dirección Municipal de la Mujer niñez y Adolescencia. Vela por los derechos de la mujer,
-							niños y adolecentes. Pueden obtener asesoría y ayuda de cualquier inconveniente que estén presentando.			
+	<section class="page-title bg-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="block">
+						<h1>Oficinas</h1>
+						<p>
+							Contamos con las siguientes oficinas en las que te atenderemos con mucho gusto
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="post">
-					<div class="post-thumb">
-						<a href="blog-single.html">
-							<img class="img-fluid" src="https://images.pexels.com/photos/2339722/pexels-photo-2339722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-						</a>
-					</div>
-					<h3 class="post-title"><a href="blog-single.html">OMAS</a></h3>
-					<div class="post-meta">
-						<ul>
-							<li>
-								<i class="ion-ios-location-outline"></i> Tacana
-							</li>
-							<li>
-								<i class="ion-ios-alarm-outline"></i> Atención desde 8:00 am a 5:00 pm							</li>
-							<li>
-								<i class="ion-calendar"></i> Lunes a viernes</li>
+		</div>
+	</section>
 
-						</ul>
-					</div>
-					<div class="post-content">
-						<p>Oficina Municipal de Agua y Saneamiento, vela por una calidad de agua que esta en el sistema de tuberias
-							del municipio de tacaná, asi mismo es la encargada de realizar los cobros por el uso de servicio de agua
-							en el hogar.
-						</p>
+
+	<div class="page-wrapper">
+		<div class="container">
+			<div class="row">
+
+				{%for i in object_list%}
+				<div class="col-md-6">
+					<div class="post">
+						<div class="post-thumb">
+							<a>
+								<img class="img-fluid"
+									src="{{i.foto.url}}"
+									alt="img">
+							</a>
+						</div>
+						<h3 class="post-title"><a href="blog-single.html">{{i.nombre}}</a></h3>
+						<div class="post-meta">
+							<ul>
+								<li>
+									<i class="ion-ios-location-outline"></i> {{i.direccion}}
+								</li>
+								<li>
+									<i class="ion-ios-alarm-outline"></i> {{i.horario}}
+								</li>
+								<li>
+									<i class="ion-calendar"></i> {{i.diasH}}
+								</li>
+
+							</ul>
+						</div>
+						<div class="post-content">
+							<p>{{i.descripcion}}</p>
+
+						</div>
 					</div>
 				</div>
-			</div>
-	</div>
-</div>
+				{% endfor %}
 
 
-<!-- footer Start -->
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<p class="copyright mb-0">Mejorando la calida de vida la sociedad
-					<br>Municipalidad de Tacaná
-				</p>
 			</div>
 		</div>
 	</div>
-</footer>
 
-<!--Scroll to top-->
-<div id="scroll-to-top" class="scroll-to-top">
-	<span class="icon ion-ios-arrow-up"></span>
-</div>
+	<!-- footer Start -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
 
-    <!-- 
+					<p class="copyright mb-0">Mejorando la calida de vida la sociedad
+						<br>Municipalidad de Tacaná
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--Scroll to top-->
+	<div id="scroll-to-top" class="scroll-to-top">
+		<span class="icon ion-ios-arrow-up"></span>
+	</div>
+
+	<!-- 
     Essential Scripts
     =====================================-->
 
 
- <!-- Main jQuery -->
- <script src="{% static 'plugins/jquery/jquery.min.js' %} "></script>
- <!-- Bootstrap 3.1 -->
- <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
- <!-- slick Carousel -->
- <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
- <script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
- <!-- filter -->
- <script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
- <script src="{% static 'plugins/SyoTimer/jquery.syotimer.min.js' %}"></script>
- <!-- Google Map -->
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
- <script src="{% static 'plugins/google-map/map.js' %}"></script>
+	<!-- Main jQuery -->
+	<script src="{% static 'plugins/jquery/jquery.min.js' %} "></script>
+	<!-- Bootstrap 3.1 -->
+	<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+	<!-- slick Carousel -->
+	<script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+	<script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+	<!-- filter -->
+	<script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+	<script src="{% static 'plugins/SyoTimer/jquery.syotimer.min.js' %}"></script>
+	<!-- Google Map -->
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+	<script src="{% static 'plugins/google-map/map.js' %}"></script>
 
- <script src="{% static 'js/script.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

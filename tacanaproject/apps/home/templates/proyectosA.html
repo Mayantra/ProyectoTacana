@@ -118,69 +118,25 @@
           </div>
           <div class="row shuffle-wrapper">
             
+            {% for i in object_list%}
             <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
               <a href="{% url 'home:detallesproject'%}">
-              <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <img src="{{i.foto.url}}" alt="img">
               <div class="portfolio-hover">
                 <div class="portfolio-content">
                   <a href="{% url 'home:detallesproject'%}"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="{% url 'home:detallesproject'%}">Infraestructura de Escuela</a>
-                  <p>Escuela Greis </p>
+                  <a class="h3" href="{% url 'home:detallesproject'%}">{{i.nombre}}</a>
+                  <p>{{i.lugar}} </p>
                 </div>
               </div>
             </a>
             </div>
+            {%endfor%}
           
-            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
-              <img src="https://images.pexels.com/photos/1474993/pexels-photo-1474993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="https://images.pexels.com/photos/3688260/pexels-photo-3688260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="portfolio-single.html">Reparacion de Estructuras Metalicas</a>
-                  <p>Salon de usos multiples</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;illustration&quot;]">
-              <img src="https://images.pexels.com/photos/33266/work-chinese-industrial-professional.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="https://images.pexels.com/photos/4509089/pexels-photo-4509089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="portfolio-single.html">Reconstruccion de Areas publicas</a>
-                  <p>Parques recreativos </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;video&quot;,&quot;illustration&quot;]">
-              <img src="https://images.pexels.com/photos/162564/gardener-worker-gardening-machinery-162564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work4.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
-              <img src="https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work5.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;video&quot;]">
-              <img src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?cs=srgb&dl=pexels-pixabay-159358.jpg&fm=jpg" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work6.jpg" class="portfolio-popup"><i class="icon ion-ios-arrow-up"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
+            
+
+
+
           </div>
 
 

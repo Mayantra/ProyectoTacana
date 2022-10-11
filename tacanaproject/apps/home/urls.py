@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path 
 from .views import *
 
+
+
 app_name = 'home'
 urlpatterns =[
     path('index/', indexView.as_view(), name='index'),
@@ -20,4 +22,4 @@ urlpatterns =[
     path('avances/', avancesProyecto.as_view(), name='avances'),
     path('ver/', verView.as_view(), name='ver'),
 
-]
+] 
