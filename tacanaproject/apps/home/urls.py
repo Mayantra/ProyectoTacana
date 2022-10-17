@@ -11,6 +11,8 @@ urlpatterns =[
     path('proyectosA/', proyectosView.as_view(), name='proyectosA'),
     path('detallesproject/<int:pk>/', detallesProject.as_view(), name='detallesproject'),
 
+    path('avances/<int:pk>/', avancesProyecto.as_view(), name='avances'),
+
     path('contacto/', contactoView.as_view(), name='contacto'),
     path('oficinas/', oficinaView.as_view(), name='oficinas'),
     path('login/', loginView.as_view(), name='login'),
@@ -21,7 +23,7 @@ urlpatterns =[
     path('formTipo/', formTipoView.as_view(), name='formTipo'),
 
 
-    path('avances/', avancesProyecto.as_view(), name='avances'),
+    
     path('ver/', verView.as_view(), name='ver'),
 
 ] 

@@ -15,7 +15,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Login</title>
+  <title>Avances</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -99,71 +99,41 @@
   <div class="page-wrapper">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-5">
+
+          {% for i in object_list%}
+          <div class="post">
+            <div class="post-media post-thumb">
+              <a href="blog-single.html">
+                <img
+                  src="{{i.foto.url}}"
+                  alt="">
+              </a>
+            </div>
+            <h3 class="post-title"><a href="blog-single.html">{{i.titulo}}</a></h3>
+            <div class="post-meta">
+              <ul>
+                <i class="ion-calendar"></i> {{i.fechas}}</li>
+
+              </ul>
+            </div>
+            <div class="post-content">
+              <p>{{i.descripcion}}</p>
+              <!-- <a href="blog-single.html" class="btn btn-main">Leer mas sobre este avance</a> -->
+            </div>
+
+          </div>
+          {%endfor%}
 
           
-          <div class="post">
-            <div class="post-media post-thumb">
-              <a href="blog-single.html">
-                <img
-                  src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="">
-              </a>
-            </div>
-            <h3 class="post-title"><a href="blog-single.html">Eliminar Fugas</a></h3>
-            <div class="post-meta">
-              <ul>
-                <i class="ion-calendar"></i> 25/03/2022</li>
-
-              </ul>
-            </div>
-            <div class="post-content">
-              <p>Se realizno un proceso para encontrar la fugas, encontrando puntos de humedad, desenterrando la tuveria
-                y cambiandola de tal manera de que no de problemas en adelante. </p>
-              <a href="blog-single.html" class="btn btn-main">Leer mas sobre este avance</a>
-            </div>
-
-          </div>
-
-          <div class="post">
-            <div class="post-media post-thumb">
-              <a href="blog-single.html">
-                <img
-                src="https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="">
-              </a>
-            </div>
-            <h3 class="post-title"><a href="blog-single.html">Renovar Infraestructura de laminas</a></h3>
-            <div class="post-meta">
-              <ul>
-                <i class="ion-calendar"></i> 25/03/2022</li>
-
-              </ul>
-            </div>
-            <div class="post-content">
-              <p>Se encontraron los puntos de apoyo de las laminas en mal estado, por lo que se procederá a darle
-                mantenimiento para que las laminas puedan estar solidad y en su lugar.</p>
-              <a href="blog-single.html" class="btn btn-main">Leer mas sobre este avance</a>
-            </div>
-
-          </div>
 
         </div>
 
-        <nav aria-label="Page navigation example">
-          <ul class="pagination post-pagination">
-            <li class="page-item"><a class="page-link" href="blog-grid.html">Prev</a></li>
-            <li class="page-item"><a class="page-link" href="blog-grid.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="blog-grid.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="blog-grid.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="blog-grid.html">Next</a></li>
-          </ul>
-        </nav>
+        
 
 
       </div>
     </div>
-  </div>
   </div>
 
   <!-- footer Start -->

@@ -1,8 +1,4 @@
-import email
-from hashlib import md5
-from operator import mod
-from pyexpat import model
-from re import T
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -63,7 +59,21 @@ class proyectoslist(models.Model):
     fecha_actualizacion = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de Actualizacion')
 
     def __str__(self):
-        return self.nombre
-   
+        return self.nombre+' '+self.lugar
 
+class avances(models.Model):
+    titulo = models.CharField(max_length =300, verbose_name = 'Titulo', blank =True) 
+    proyecto = models.ForeignKey(proyectoslist, on_delete = models.CASCADE, blank=True, default=1)
+    descripcion = models.TextField(verbose_name='descripcion', blank=True)
+    fechas = models.DateField(verbose_name = 'Fecha', blank= True)
+
+    foto = models.FileField(upload_to="images/",verbose_name='Foto', blank=True) 
     
+
+    fecha_alta= models.DateTimeField(auto_now_add=True, verbose_name='Fecha alta')
+    fecha_actualizacion = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de Actualizacion')
+
+    def __str__(self):
+        return self.titulo
+
+   

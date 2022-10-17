@@ -1,3 +1,4 @@
+from atexit import register
 from django.contrib import admin
 from .models import *
 
@@ -7,4 +8,5 @@ admin.site.register(oficina),
 admin.site.register(encargados),
 admin.site.register(proyectoslist),
 admin.site.register(tipoProyecto),
+admin.site.register(avances),
 

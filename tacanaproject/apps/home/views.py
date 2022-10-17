@@ -1,9 +1,8 @@
-from string import Template
-from django.shortcuts import render
 from django.views.generic import *
 from django.contrib.auth.views import *
-
+from django.urls import reverse_lazy
 from .models import *
+from .forms import *
 
 # Create your views here.
 
@@ -25,27 +24,49 @@ class detallesProject(DetailView):
     model =proyectoslist
     template_name = 'detallesProject.html'
 
+
+
+    
+
 #Pagina para ponerse en contacto
 class contactoView(TemplateView):
     template_name = 'contact.html'
 
+
+
 class oficinaView(ListView):
     model = oficina
     template_name = 'oficinas.html'
+
 
     
 
 class loginView(LoginView):
     template_name = 'registro/login.html'
 
-class avancesProyecto(TemplateView):
+
+
+class avancesProyecto(ListView):
+    model = avances
     template_name = 'avances.html'
+
+    
+
+    queryset = avances.objects.order_by('-id')
+    
+    queryset = avances.objects.filter(proyecto='1')
+
+
 
     
 #-------------------------------------------------
 #Formularios del perfil de encargados 
-class formularioAView(TemplateView):
+class formularioAView(CreateView):
+    model = avances
+    form_class = formAvances
     template_name = 'formAvances.html'
+    success_url = reverse_lazy('home:formAvances')
+    
 
 class formProView(TemplateView):
     template_name = 'formProyecto.html'

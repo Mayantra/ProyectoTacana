@@ -99,7 +99,7 @@
             <li><span><i class="fa fa-ils "></i> Presupuesto</span><strong> Q {{object.presupuesto}}</strong></li>
             <li><span><i class="icon-calendar3"></i>Encargado</span> {{object.encargado}}</li>
             <li><span><i class="icon-calendar3"></i>Tiempo de Ejecución</span> {{object.tiempo}}</li>
-            <li><a href="{% url 'home:avances'%}" class="btn btn-small">Avances del Proyecto</a></li>
+            <li><a href="{% url 'home:avances' object.id%}" class="btn btn-small">Avances del Proyecto</a></li>
           </ul>
         </div>
       </div>
@@ -140,7 +140,7 @@
             <p>Se realizno un proceso para encontrar la fugas, encontrando puntos de humedad, desenterrando la tuveria
               y cambiandola de  tal manera de que no de problemas en adelante.
             </p>
-            <a href="{% url 'home:avances'%}" class="btn btn-small">Ver todos los avances</a>
+            <a href="{% url 'home:avances' object.id%}" class="btn btn-small">Ver todos los avances</a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
             <p>Se encontraron los puntos de apoyo de las laminas en mal estado, por lo que se procederá a darle
               mantenimiento para que las laminas puedan estar solidad y en su lugar.
             </p>
-            <a href="{% url 'home:avances'%}" class="btn btn-small">Ver todos lo avances</a>
+            <a href="{% url 'home:avances' object.id%}" class="btn btn-small">Ver todos lo avances</a>
           </div>
         </div>
       </div>

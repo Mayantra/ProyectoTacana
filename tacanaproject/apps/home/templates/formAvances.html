@@ -65,8 +65,8 @@
 	  
 						  <div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
 							  <ul class="navbar-nav ml-auto">
-								<li class="nav-item">
-									<a class="nav-link" href="{% url 'home:formAvances'%}">Nuevo Avance</a>
+								<li class="nav-item active">
+									<a class="nav-link " href="{% url 'home:formAvances'%}">Nuevo Avance</a>
 								</li>
 				  <li class="nav-item">
 									<a class="nav-link" href="{% url 'home:formProyecto'%}">Nuevo Proyecto</a>
@@ -100,38 +100,36 @@
 
 	<section class="contact-form">
 		<div class="container">
-			<form class="row" id="contact-form">
+			
+			
+	
+			<form class="row" id="contact-form" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
 				<div class="col-md-6 col-sm-12">
 					<div class="block">
 						<div class="form-group">
 							<label for="sel1">Titulo</label>
 							<p>Sea específico en el titulo de manera que pueda sobresalir de los demás avances</p>
-							<input class="form-control" placeholder="Titulo del avance">
-						</div>
-						<div class="form-group">
-							<label for="sel1">Ubicación</label>
-							<input class="form-control" placeholder="Dirección">
+							{{form.titulo}}
 						</div>
 						<div class="form-group">
 							<label for="sel1">Proyecto</label>
-							<select class="form-control" id="sel1">
-							  <option>Mantenimeinto de Escuela</option>
-							  <option>Correccion de baches Calle principal</option>
-							  <option>Mantenimiento de drenajes area metropolitana</option>
-							  <option>Mantenimiento de tuverias</option>
-							</select>
-						  </div>
+							{{form.proyecto}}
+						</div>
+						
 						<div class="form-group">
 							<label for="sel1">Fecha</label>
-							<input class="form-control" type="date" >
+							{{form.fechas}}
 						</div>
 						<div class="form-group">
 							<label for="sel1">Agregar Imagen del avance</label>
 							
 
 							<div class="custom-file">
-								<input type="file" accept="image/png,image/jpeg,image/jpg" class="custom-file-input" id="customFileLang" lang="es">
-								<label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+								{{form.foto}}
+								
+								<!-- <input type="file" accept="image/png,image/jpeg,image/jpg" class="custom-file-input" id="customFileLang" lang="es">
+								<label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label> -->
 							  </div>
 						</div>
 						
@@ -141,10 +139,9 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="block">
 						<div class="form-group-2">
-							<textarea class="form-control" rows="8"
-								placeholder="Descripción del Avance"></textarea>
+							{{form.descripcion}}
 						</div>
-						<button class="btn btn-default" type="submit">Send Message</button>
+						<button class="btn btn-default" type="submit">Registrar Avance</button>
 					</div>
 				</div>
 				<div class="error" id="error">Sorry Msg dose not sent</div>
