@@ -72,7 +72,7 @@
 									  <a class="nav-link" href="{% url 'home:formProyecto'%}">Nuevo Proyecto</a>
 								  </li>
 								  
-								  <li class="nav-item "><a class="nav-link" href="{% url 'home:formTipo'%}">Nuevo Tipo de Proyecto</a></li>
+								  <li class="nav-item active"><a class="nav-link" href="{% url 'home:formTipo'%}">Nuevo Tipo de Proyecto</a></li>
 								  
 								  <li class="nav-item @@contact"><a class="nav-link" href="{% url 'home:logout' %}">logout</a></li>
 							  </ul>
@@ -100,12 +100,14 @@
 
 	<section class="contact-form">
 		<div class="container">
-			<form class="row" id="contact-form">
+
+			<form class="row" id="contact-form" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
 				<div class="col-md-6 col-sm-12">
 					<div class="block">
 						<div class="form-group">
 							<label for="sel1">Nombre</label>
-							<input class="form-control" placeholder="Nombre del Tipo de Proyecto">
+							{{form.nombre}}
 						</div>
 											
 
@@ -114,10 +116,13 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="block">
 						<div class="form-group-2">
-							<textarea class="form-control" rows="8"
-								placeholder="Descripción del Tipo de Proyecto"></textarea>
+							{{form.descripcion}}
 						</div>
-						<button class="btn btn-default" type="submit">Send Message</button>
+						<button class="btn btn-default" type="submit">Registrar Proyecto</button>
+						<br><br>
+						<div>
+							<a href="{% url 'home:formTipo'%}" class="btn btn-danger col-md-12"> Cancelar</a>
+						</div>
 					</div>
 				</div>
 				<div class="error" id="error">Sorry Msg dose not sent</div>

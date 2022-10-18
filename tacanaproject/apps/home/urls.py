@@ -23,7 +23,4 @@ urlpatterns =[
     path('formTipo/', formTipoView.as_view(), name='formTipo'),
 
 
-    
-    path('ver/', verView.as_view(), name='ver'),
-
 ] 

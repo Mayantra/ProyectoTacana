@@ -46,15 +46,20 @@ class loginView(LoginView):
 
 
 
+
 class avancesProyecto(ListView):
     model = avances
     template_name = 'avances.html'
+    pk_url_kwarg = 'home:avances'
 
+    def get_queryset(self, **kwargs):
+        qs = avances.objects.filter(proyecto=self.kwargs['pk']).order_by('-fechas')
+        return qs
+    #queryset = avances.objects.order_by('-fechas').filter(proyecto =1)
+        
     
-
-    queryset = avances.objects.order_by('-id')
     
-    queryset = avances.objects.filter(proyecto='1')
+    
 
 
 
@@ -68,14 +73,16 @@ class formularioAView(CreateView):
     success_url = reverse_lazy('home:formAvances')
     
 
-class formProView(TemplateView):
+class formProView(CreateView):
+    model = proyectoslist
+    form_class = formProyectos
     template_name = 'formProyecto.html'
+    success_url = reverse_lazy('home:formProyecto')
 
-class formTipoView(TemplateView):
+class formTipoView(CreateView):
+    model = tipoProyecto
+    form_class = formTipo
     template_name = 'formTipo.html'
+    success_url = reverse_lazy('home:formTipo')
 #-----------------------------------------------
 
-
-
-class verView(TemplateView):
-    template_name = 'avances.html'
